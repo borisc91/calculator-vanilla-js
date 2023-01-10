@@ -64,14 +64,14 @@ kib = false;
    function izracunaj(){
     while(rezultat.length > 1){
         
-        if(rezultat[rezultat.indexOf('%') + 1] === 0 && rezultat.indexOf('%') !== -1){
+        if(rezultat[rezultat.indexOf('/') + 1] === 0 && rezultat.indexOf('/') !== -1){
             alert('Ne mozemo da delimo sa nulom!');
             rezultat=[0];
         }
-        else if(rezultat.find(broj => broj === '%') === '%'){
-          let prvi=  rezultat[rezultat.indexOf('%') -1] / rezultat[rezultat.indexOf('%') +1];
+        else if(rezultat.find(broj => broj === '/') === '/'){
+          let prvi=  rezultat[rezultat.indexOf('/') -1] / rezultat[rezultat.indexOf('/') +1];
           
-          rezultat.splice(rezultat.indexOf('%') -1, 3, prvi);
+          rezultat.splice(rezultat.indexOf('/') -1, 3, prvi);
           
       }
       
@@ -97,4 +97,4 @@ kib = false;
        rezultat = [0]; 
     }
 }
-}; 
+};
